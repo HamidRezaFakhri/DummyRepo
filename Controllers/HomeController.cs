@@ -34,7 +34,8 @@ namespace DummyRepo.Controllers
             var ts = new TimeSpan(0, 0, 0);
             var todayMorning = DateTime.Today.Date + ts;
 
-            for (int i = 0; i < 24; i++)
+            model.Add(todayMorning);
+            for (int i = 1; i < 25; i++)
             {
                 model.Add(todayMorning.AddHours(i));
             }
