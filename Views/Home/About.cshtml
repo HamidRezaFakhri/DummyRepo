@@ -1,0 +1,12 @@
+﻿@model List<DateTime>
+@{
+    ViewData["Title"] = "About today";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var item in Model)
+{
+    <h1>@item</h1>
+    <br>
+}
+

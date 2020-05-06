@@ -28,6 +28,20 @@ namespace DummyRepo.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            var model = new List<DateTime>();
+            var ts = new TimeSpan(0, 0, 0);
+            var todayMorning = DateTime.Today.Date + ts;
+
+            for (int i = 0; i < 24; i++)
+            {
+                model.Add(todayMorning.AddHours(i));
+            }
+
+            return View(model);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
